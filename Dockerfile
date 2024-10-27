@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=argoproj/argocd:v2.6.15 /usr/local/bin/argocd /usr/local/bin/argocd
-COPY --from=bitnami/kubectl:1.31.0 /opt/bitnami/kubectl/bin/kubectl /usr/local/bin/kubectl
+COPY --from=bitnami/kubectl:1.31.2 /opt/bitnami/kubectl/bin/kubectl /usr/local/bin/kubectl
 
 # Aliases
 RUN ln -s /usr/local/bin/kubectl /usr/local/bin/k
